@@ -1,8 +1,8 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `3.4.0` (*Dockerfile*)](https://github.com/n42org/docker-tox/blob/latest/Dockerfile)
+-	[`latest`, `3.7.0` (*Dockerfile*)](https://github.com/masahide/docker-tox/blob/latest/Dockerfile)
 
-[![Build Status](https://travis-ci.org/n42org/docker-tox.svg?branch=master)](https://travis-ci.org/n42org/docker-tox) [![Docker Pulls](https://img.shields.io/docker/pulls/n42org/tox.svg)](https://hub.docker.com/r/n42org/tox/)
+[![Build Status](https://travis-ci.org/masahide/docker-tox.svg?branch=master)](https://travis-ci.org/masahide/docker-tox) [![Docker Pulls](https://img.shields.io/docker/pulls/masahide/tox.svg)](https://hub.docker.com/r/masahide/tox/)
 
 # What is Tox?
 
@@ -19,7 +19,7 @@ Tox is a generic virtualenv management and test command line tool you can use fo
 ### Create a `Dockerfile` in your project
 
 ```dockerfile
-FROM n42org/tox
+FROM masahide/tox
 ```
 
 Then, run the commands to build and run the Docker image:
@@ -34,7 +34,7 @@ $ docker run -it --rm --name my-tox-app -v "$PWD:/code" my-tox tox
 If you don't want to include a `Dockerfile` in your project, it is sufficient to do the following:
 
 ```console
-$ docker run -it --rm --name my-tox-app -v "$PWD:/code" n42org/tox tox
+$ docker run -it --rm --name my-tox-app -v "$PWD:/code" masahide/tox tox
 ```
 
 # License
