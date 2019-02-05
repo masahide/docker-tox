@@ -26,7 +26,7 @@ Then, run the commands to build and run the Docker image:
 
 ```console
 $ docker build -t my-tox .
-$ docker run -it --rm --name my-tox-app -v "$PWD:/code" my-tox tox
+$ docker run -it --rm -v "$PWD:/code" my-tox tox
 ```
 
 ### Without a `Dockerfile`
@@ -34,7 +34,7 @@ $ docker run -it --rm --name my-tox-app -v "$PWD:/code" my-tox tox
 If you don't want to include a `Dockerfile` in your project, it is sufficient to do the following:
 
 ```console
-$ docker run -it --rm --name my-tox-app -v "$PWD:/code" masahide/tox tox
+$ docker run -it --rm -v "$PWD:/code" -w /code masahide/tox tox
 ```
 
 # License
