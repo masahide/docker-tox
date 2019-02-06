@@ -25,6 +25,7 @@ RUN apt-get update \
     python3.7-dev \
     pypy-dev \
     build-essential \
+    make \
   && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://bootstrap.pypa.io/get-pip.py | pypy \
