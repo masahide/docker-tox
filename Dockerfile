@@ -1,8 +1,6 @@
 FROM ubuntu:xenial
 
 ENV TOX_VERSION 3.7.0
-ENV TOX_PIPENV_VERSION 1.9.0
-ENV PIPENV_VERSION 2018.11.26
 
 RUN gpg --keyserver keyserver.ubuntu.com --recv-keys 6A755776 \
   && gpg --export 6A755776 | apt-key add - \
@@ -31,6 +29,4 @@ RUN apt-get update \
 RUN curl -fsSL https://bootstrap.pypa.io/get-pip.py | pypy \
   && curl -fsSL https://bootstrap.pypa.io/get-pip.py | python3.7 \
   && pip install tox==$TOX_VERSION \
-  && pip install pipenv==$PIPENV_VERSION \
-  && pip install tox-pipenv==$TOX_PIPENV_VERSION \
   && rm -rf /root/.cache/pip
