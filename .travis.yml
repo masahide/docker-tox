@@ -13,7 +13,6 @@ script:
   - docker run --rm masahide/tox pypy --version
   - docker run --rm masahide/tox pip --version
   - docker run --rm masahide/tox tox --version
-  - docker run --rm masahide/tox pipenv --version
   - docker run --rm masahide/tox make --version
   - docker run --rm masahide/tox gcc --version
 
